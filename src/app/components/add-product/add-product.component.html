@@ -1,0 +1,82 @@
+
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+    
+
+    <br><br><br>
+
+      <div class="p-fluid p-grid">
+
+
+        <div class="p-field p-col-12 p-md-4">
+          <span class="p-float-label">
+            <input formControlName="id" id="id" pInputText>
+            <label for="id">id</label>
+            <span class="text-danger" *ngIf="getControl.id.touched && getControl.id.invalid">
+              Field is required
+            </span> 
+          </span>
+        </div>
+
+        <br><br><br>
+
+        <div class="p-field p-col-12 p-md-4">
+          <span class="p-float-label">
+            <input formControlName="name" id="name" pInputText>
+            <label for="name">name</label>
+            <span class="text-danger" *ngIf="getControl.name.touched && getControl.name.invalid">
+              Field is required
+            </span>
+          </span>
+        </div>
+        <br><br><br>
+
+        <div class="p-field p-col-12 p-md-4">
+          <span class="p-float-label">
+            <input formControlName="amount" id="amount" pInputText>
+            <label for="amount">amount</label>
+            <span class="text-danger" *ngIf="getControl.amount.touched && getControl.amount.invalid">
+              Field is required
+            </span>
+          </span>
+        </div>
+        <br><br><br>
+
+        <div class="p-field p-col-12 p-md-4">
+          <span class="p-float-label">
+            <input formControlName="description" id="description" pInputText>
+            <label for="description">description</label>
+            <span class="text-danger" *ngIf="getControl.description.touched && getControl.description.invalid">
+              Field is required
+            </span>
+          </span>
+        </div>
+
+        <br><br><br>
+
+
+
+        <div class="p-field p-col-12 p-md-4">
+          <span class="p-float-label">
+            <p-dropdown formControlName="type" [options]="types" id="type"  optionLabel="name" optionValue="code"></p-dropdown>
+            <label for="type">type</label>
+            <span class="text-danger" *ngIf="getControl.type.touched && getControl.type.invalid">
+              Field is required
+            </span>
+
+          </span>
+        </div>
+
+        <br><br><br>
+
+        <button pButton  type="submit">Send</button>
+
+
+      </div>
+
+
+
+
+   
+  </form>
